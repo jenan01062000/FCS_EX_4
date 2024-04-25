@@ -1,0 +1,21 @@
+#visualisation + ranking part
+
+import pandas as pd
+from tkinter import Tk, Label, Frame, Listbox, Scrollbar
+
+# example
+co2_data = {x, 'Emmisions':[], }
+
+y = pd.DataFrame(co2_data)
+y = y.sort_values(by='emmisions', ascending=False)
+y['order'] = range(1, len(y) + 1)
+
+
+window = Tk()
+window.title("CO2-Ranking")
+
+listen_frame = Frame(Window)
+listen_frame.pack()
+
+
+window.mainloop()
